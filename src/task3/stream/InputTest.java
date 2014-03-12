@@ -10,12 +10,12 @@ public class InputTest {
 	public static void main(String[] args) {
 		int c;
 		try {
-			Reader in = new LowerCaseReader(new BufferedReader(new FileReader(
-					"test.txt")));
+			Reader in = new MultipleSpaceReader(new LowerCaseReader(
+					new BufferedReader(new FileReader("test.txt"))));
 			while ((c = in.read()) >= 0) {
 				System.out.print((char) c);
 			}
-
+			System.out.println();
 			in = new UpperCaseReader(new BufferedReader(new FileReader(
 					"test.txt")));
 			while ((c = in.read()) >= 0) {
