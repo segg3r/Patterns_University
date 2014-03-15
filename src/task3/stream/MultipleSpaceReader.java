@@ -47,10 +47,14 @@ public class MultipleSpaceReader extends FilterReader {
 
 	public int read(char[] b, int offset, int len) throws IOException {
 		int result = super.read(b, offset, len);
-		for (int i = offset; i < offset + result; i++) {
-			b[i] = Character.toUpperCase(b[i]);
+		String initialRead = new String(b, offset, result);
+		String resultString = initialRead.replaceAll("[\t ]+", " ");
+		int length = resultString.length();
+		for (int i = offset; i < offset + length; i++) {
+			b[i] = resultString.charAt(i - offset);
 		}
-		return result;
+
+		return length;
 	}
 
 }
