@@ -1,9 +1,9 @@
-package task4.factorymethod.gnomes;
+package task4.gnomes;
 
-import task4.factorymethod.AdditionalGemstone;
-import task4.factorymethod.JewelryItem;
-import task4.factorymethod.MainGemstone;
-import task4.factorymethod.Metal;
+import task4.AdditionalGemstone;
+import task4.JewelryItem;
+import task4.MainGemstone;
+import task4.Metal;
 
 public class GnomishBrooch extends JewelryItem {
 

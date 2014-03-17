@@ -1,4 +1,4 @@
-package task4.factorymethod;
+package task4;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,12 @@ public class JewelryItem {
 		super();
 		additionalGemstones = new ArrayList<AdditionalGemstone>();
 		process = new ArrayList<String>();
+	}
+
+	public void fillFromFactory(IngridientFactory ingridientFactory) {
+		metal = ingridientFactory.getMetal();
+		mainGemstone = ingridientFactory.getMainGemstone();
+		additionalGemstones = ingridientFactory.getAdditionalGemstones();
 	}
 
 	public void formBase() {

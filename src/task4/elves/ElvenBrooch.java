@@ -1,8 +1,8 @@
-package task4.factorymethod.elves;
+package task4.elves;
 
-import task4.factorymethod.JewelryItem;
-import task4.factorymethod.MainGemstone;
-import task4.factorymethod.Metal;
+import task4.JewelryItem;
+import task4.MainGemstone;
+import task4.Metal;
 
 public class ElvenBrooch extends JewelryItem {
 

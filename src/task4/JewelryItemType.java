@@ -1,4 +1,4 @@
-package task4.factorymethod;
+package task4;
 
 public class JewelryItemType {
 
