@@ -6,7 +6,7 @@ import java.io.Reader;
 
 public class UpperCaseReader extends FilterReader {
 
-	protected UpperCaseReader(Reader in) {
+	public UpperCaseReader(Reader in) {
 		super(in);
 	}
 

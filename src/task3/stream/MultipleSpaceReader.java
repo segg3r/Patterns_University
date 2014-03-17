@@ -9,7 +9,7 @@ public class MultipleSpaceReader extends FilterReader {
 	private boolean returnSavedChar;
 	private char savedChar;
 
-	protected MultipleSpaceReader(Reader in) {
+	public MultipleSpaceReader(Reader in) {
 		super(in);
 	}
 

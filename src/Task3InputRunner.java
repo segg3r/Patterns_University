@@ -1,11 +1,14 @@
-package task3.stream;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 
-public class InputTest {
+import task3.stream.LowerCaseReader;
+import task3.stream.MultipleSpaceReader;
+import task3.stream.UpperCaseReader;
+
+public class Task3InputRunner {
 
 	public static void main(String[] args) {
 		int c;

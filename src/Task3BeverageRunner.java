@@ -1,4 +1,4 @@
-package task3;
+
 
 import task3.base.Beverage;
 import task3.base.Size;
@@ -9,7 +9,7 @@ import task3.condiment.Mocha;
 import task3.condiment.Soy;
 import task3.condiment.Whip;
 
-public class StarbuzzCoffee {
+public class Task3BeverageRunner {
 	public static void main(String[] args) {
 		Beverage beverage = new Espresso();
 		System.out.println(beverage.getDescription() + " $" + beverage.cost());
