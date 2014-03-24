@@ -7,7 +7,7 @@ import task5.JewelryThread;
 public class RingJewelryThread extends JewelryThread {
 
 	public RingJewelryThread(JewelryMaster jewelryMaster) {
-		super(1, 20, jewelryMaster, JewelryItemType.RING);
+		super(60, 80, jewelryMaster, JewelryItemType.RING);
 	}
 
 }

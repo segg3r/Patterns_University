@@ -1,10 +1,18 @@
 package task5;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import task4.JewelryItem;
 import task4.JewelryItemType;
 
 public abstract class JewelryThread extends Thread {
 
+	private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat(
+			"hh:mm:ss");
+	private static int threadCounter = 0;
+
+	private final int threadNumber;
 	private int minRange;
 	private int maxRange;
 	private JewelryMaster jewelryMaster;
@@ -13,6 +21,7 @@ public abstract class JewelryThread extends Thread {
 	public JewelryThread(int minRange, int maxRange,
 			JewelryMaster jewelryMaster, JewelryItemType jewelryItemType) {
 		super();
+		this.threadNumber = threadCounter++;
 		this.minRange = minRange;
 		this.maxRange = maxRange;
 		this.jewelryMaster = jewelryMaster;
@@ -31,7 +40,8 @@ public abstract class JewelryThread extends Thread {
 				synchronized (jewelryMaster) {
 					JewelryItem jewelryItem = jewelryMaster
 							.orderJewelryItem(jewelryItemType);
-					System.out.println("Thread " + getId() + " ordered");
+					System.out.println("Thread: " + threadNumber + "; Time: "
+							+ DATE_FORMATTER.format(new Date()));
 					System.out.println(jewelryItem.getProcess());
 				}
 			}
